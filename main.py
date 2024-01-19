@@ -61,8 +61,7 @@ def process_input(input_code):
     result = f"Processed: {input_code}"
     return result
 
-
-def git_commit_and_push(message="Auto commit"):
+def git_commit_and_push(message="Auto commit", branch="main"):
     try:
         # Add all changes to the staging area
         subprocess.run(["git", "add", "."], check=True)
@@ -71,11 +70,13 @@ def git_commit_and_push(message="Auto commit"):
         subprocess.run(["git", "commit", "-m", message], check=True)
 
         # Push changes to the remote repository
-        subprocess.run(["git", "push", "origin", "master"], check=True)
+        subprocess.run(["git", "push", "origin", branch], check=True)
 
         print("Changes committed and pushed successfully.")
     except subprocess.CalledProcessError as e:
         print(f"Error: {e}")
+git_commit_and_push(message="Auto commit", branch="test")
+
 
 
 if __name__ == "__main__":
