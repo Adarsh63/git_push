@@ -75,7 +75,7 @@ def git_commit_and_push(message="Auto commit", branch="main"):
         print("Changes committed and pushed successfully.")
     except subprocess.CalledProcessError as e:
         print(f"Error: {e}")
-git_commit_and_push(message="Auto commit", branch="test")
+git_commit_and_push(message="Auto commit", branch="main")
 
 
 
