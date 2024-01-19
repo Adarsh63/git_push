@@ -129,3 +129,8 @@ Processed:         # Optionally, update an external file with the result
 Processed: sjdn
 
 """
+
+"""
+Processed:         subprocess.run(["git", "commit", "-m", message], check=True)
+
+"""
