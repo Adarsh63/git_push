@@ -141,3 +141,10 @@ Processed:         try:
                 input_code = file.read().strip()
 
 """
+
+"""
+Processed: Processed:         # Optionally, update an external file with the result
+        with open("output.txt", "a") as file:
+            file.write(output + "\n")
+
+"""
