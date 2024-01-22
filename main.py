@@ -79,7 +79,7 @@ git_commit_and_push(message="Auto commit", branch="main")
 
 
 
-if __name__ == "__main__":
+def update():
     while True:
         # Read input from an external file or command-line argument
         try:
@@ -117,7 +117,7 @@ if __name__ == "__main__":
             git_commit_and_push("Auto commit before exit")
             break
 
-
+update()
 """
 Processed:         # Optionally, update an external file with the result
         with open("output.txt", "a") as file:
